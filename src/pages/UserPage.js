@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 export default function UserPage(props) {
@@ -36,16 +37,25 @@ export default function UserPage(props) {
     </div>
   ) : (
       <div className="container">
-        <img
-          className="rounded-circle responsive-image mb-3 mt-3"
-          src={user.avatar_url}
-          style={{ width: '100px' }}
-          alt=""
-        />
 
-        <h2>@{props.match.params.id}</h2>
+        <div className='centered-parent'>
+          <div className='centered-child'>
+            <img
+              className="rounded-circle responsive-image mb-3 mt-3"
+              src={user.avatar_url}
+              style={{ width: '100px' }}
+              alt=""
+            />
 
-        <table className="table mt-">
+            <h2>@{props.match.params.id}</h2>
+
+            <Link to="/railaru/repositories">
+              <button type="button" className="btn btn-primary">Repositories</button>
+            </Link>
+          </div>
+        </div>
+
+        <table className="table mt-3">
           <thead>
             <tr>
               <th scope="col">

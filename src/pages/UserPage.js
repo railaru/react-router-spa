@@ -30,61 +30,61 @@ export default function UserPage(props) {
   // Return a table with some data from the API.
   return user.loading ? (
     <div className="container">
-      <div class="spinner-border" role="status">
-        <span class="sr-only">Loading...</span>
+      <div className="spinner-border" role="status">
+        <span className="sr-only">Loading...</span>
       </div>
     </div>
   ) : (
-    <div className="container">
-      <img
-        className="rounded-circle responsive-image mb-3 mt-3"
-        src={user.avatar_url}
-        style={{ width: '100px' }}
-        alt=""
-      />
+      <div className="container">
+        <img
+          className="rounded-circle responsive-image mb-3 mt-3"
+          src={user.avatar_url}
+          style={{ width: '100px' }}
+          alt=""
+        />
 
-      <h2>@{props.match.params.id}</h2>
+        <h2>@{props.match.params.id}</h2>
 
-      <table class="table mt-">
-        <thead>
-          <tr>
-            <th scope="col">
-              <span role="img" aria-label="emoji">
-                😃
+        <table className="table mt-">
+          <thead>
+            <tr>
+              <th scope="col">
+                <span role="img" aria-label="emoji">
+                  🤠
               </span>
-              Name
+                Name
             </th>
-            <th scope="col">
-              <span role="img" aria-label="emoji">
-                ️🗺️
+              <th scope="col">
+                <span role="img" aria-label="emoji">
+                  ️🗺️
               </span>
-              Location
+                Location
             </th>
-            <th scope="col">
-              <span role="img" aria-label="emoji">
-                ️🌐
+              <th scope="col">
+                <span role="img" aria-label="emoji">
+                  ️🌐
               </span>
-              Website
+                Website
             </th>
-            <th scope="col">
-              <span role="img" aria-label="emoji">
-                ️👥
+              <th scope="col">
+                <span role="img" aria-label="emoji">
+                  ️👥
               </span>
-              Followers
+                Followers
             </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{user.name}</td>
-            <td>{user.location}</td>
-            <td>
-              <a href={user.blog}>{user.blog}</a>
-            </td>
-            <td>{user.followers}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  );
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{user.name}</td>
+              <td>{user.location}</td>
+              <td>
+                <a href={user.blog}>{user.blog}</a>
+              </td>
+              <td>{user.followers}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    );
 }

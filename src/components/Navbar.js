@@ -11,6 +11,9 @@ export default function Navbar() {
         <Link to="/railaru">
           <div className="ml-2 mt-3 col">railaru</div>
         </Link>
+        <Link to="/railaru/repositories">
+          <div className="ml-2 mt-3 col">railaru's repositories</div>
+        </Link>
       </div>
       <hr />
     </React.Fragment>
